@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>TEKKEN COMBO MAKER(BETA)</title>
+  <script src="/html2canvas.js"></script> 
   <style>
     /* Flexbox 布局，将标题和图像置中 */
     .header-container {
@@ -175,6 +176,7 @@
    <!-- 标题和图像的容器 -->
    <div class="header-container">
     <img src="/images/logo.jpg" alt="Your Logo" class="logo-img">
+    
 </div>
   <input type="text" id="imageInput">
   <div class="image-container" style="width: 1200px;"></div>
@@ -261,9 +263,7 @@
 
   <hr class="divider">
   <div class="image-container-new"></div>
-
   <script>
-    
     let selectedImages = [];
 
     function selectImage(imageUrl) {
@@ -295,7 +295,7 @@
           updateImageInput(); // 更新圖片預覽
         }
 
-        function removeRightmostImage() {
+    function removeRightmostImage() {
         // 检查是否有选定的图片
         if (selectedImages.length > 0) {
             // 移除最右边的图片
@@ -303,10 +303,9 @@
             updateImageInput(); // 更新图片预览
         }
     }
-
-    function copyToNewInput() {
+    User
+ function copyToNewInput() {
     let imageContainer = document.querySelector('.image-container');
-    let imageContainers = document.querySelectorAll('.image-container-new');
     let comboNameInput = document.getElementById('comboName').value; // 获取 comboName 输入框的值
 
     // 创建父容器，用于存放所有新容器
@@ -321,8 +320,8 @@
     let clearButton = document.createElement('button');
     clearButton.textContent = '清除此COMBO';
     clearButton.classList.add('clear-button');
-    
-    clearButton.addEventListener('click', function() {
+
+    clearButton.addEventListener('click', function () {
         newContainer.remove();
     });
 
@@ -343,7 +342,7 @@
     newImageContainer.classList.add('image-container-new');
 
     // 遍历所有图片元素并复制到新的输入框
-    imageContainer.childNodes.forEach(function(child) {
+    imageContainer.childNodes.forEach(function (child) {
         if (child.tagName === 'IMG') {
             let imageUrl = child.src;
 
@@ -370,20 +369,36 @@
     hr.style.backgroundColor = 'black'; // 设置分割线的颜色
     newContainer.appendChild(hr);
 
+    // 创建下载按钮
+    let downloadButton = document.createElement('button');
+    downloadButton.textContent = '下载图片';
+    downloadButton.classList.add('download-button');
+
+    // 将下载按钮添加到新的包含容器
+    newContainer.appendChild(downloadButton);
+
     // 将新的容器添加到父容器中
     parentContainer.appendChild(newContainer);
 
     // 将父容器插入到页面的最后
     document.body.appendChild(parentContainer);
 
-    clearImageInput();
+    downloadButton.addEventListener('click', async function () {
+    try {
+        let canvas = await html2canvas(parentContainer);
+        // 将 canvas 转换为图片文件的 Data URL
+        let image = canvas.toDataURL();
+
+        // 创建一个 <a> 元素，用于下载图片
+        let link = document.createElement('a');
+        link.href = image;
+        link.download = 'combo_image.png';
+        link.click();
+    } catch (error) {
+        console.error('An error occurred:', error);
+    }
+});
 }
-
-
-
-    
-    
-
   </script>
 </body>
 </html>
