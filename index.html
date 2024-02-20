@@ -15,160 +15,156 @@
     top: 0;
     background-color: white; /* 背景颜色 */
     padding: 10px 20px; /* 调整上方空间 */
-        }
-        /* 调整图像样式 */
-        .logo-img {
-            width: 500px; /* 设置图像宽度 */
-            height: auto; /* 让浏览器按比例缩放高度 */
-        }
+    }
+    /* 调整图像样式 */
+    .logo-img {
+        width: 500px; /* 设置图像宽度 */
+        height: auto; /* 让浏览器按比例缩放高度 */
+    }
     body {
           margin: 0 auto; /* 实现左右居中 */
           max-width: 1200px; /* 设定最大宽度 */
           padding: 20px; /* 添加内边距 */
-      }
-      .container {
-          display: flex;
-          align-items: center;
-      }
-      .clear-button {
-          margin-right: 10px;
-      }
-      .image-container-new {
-          display: flex;
-          align-items: center;
-          flex-wrap: wrap;
-      }
-      .image-container-new img {
-          margin-right: 5px;
-      }
-      #imageInput {
-        display: none;
-      }
-      #defaultImages {
-        flex-wrap: wrap; /* 讓子元素在空間不足時換行 */
-        display: grid; /* 使用 grid 布局 */
-       
-        grid-gap: 2px; /* 元素之间的间距 */
-      }
-
-      /* CSS 样式保持不变 */
-      .divider {
-        margin: 20px 0; /* 设置分割线的上下边距 */
-        border-top: 3px solid #000; /* 设置分割线样式 */
-      }
-
-      /* 調整圖片樣式 */
-      #defaultImages img {
-        margin-right: 1px; /* 調整圖片間距 */
-        margin-bottom: 1px; /* 調整圖片下邊距 */
-      }
-      .page-title {
-            text-align: center;
-            font-size: 36px;
-            font-weight: bold;
-            color: #333; /* 标题颜色 */
-            margin-top: 20px; /* 标题距离页面顶部的距离 */
-        }
-      .image-container {
-        width: 900px; /* 设置图片容器的宽度 */
-        height: 100px;
-        border: 3px solid #ccc;
+    }
+    .container {
+        display: flex;
+        align-items: center;
+    }
+    .clear-button {
         margin-right: 10px;
-        margin-top: 30px;
-        margin-bottom: 10px;
-        overflow-x: auto; /* 当图片容器宽度超出屏幕宽度时启用横向滚动 */
-        /*white-space: nowrap; 让图片在一行内显示 */
-      }
-      .image-preview {
-        width: 140px; /* 每张预览图片的宽度 */
-        height: 100px;
-        object-fit: cover;
-        display: inline-block; /* 设置图片在同一行内显示 */
-        margin-right: 5px; /* 图片之间的间隔 */
-      }
-      .image-preview-small { /* 工廠內的圖片 */
-       
-        width: 100px; /* 設置圖片寬度為100像素，你可以根據需要調整大小 */
-        height: auto;
-        margin: 1px; /* 設置圖片之間的間距 */
-      }
+    }
+    .image-container-new {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    .image-container-new img {
+        margin-right: 5px;
+    }
+    #imageInput {
+      display: none;
+    }
+    #defaultImages {
+      flex-wrap: wrap; /* 讓子元素在空間不足時換行 */
+      display: grid; /* 使用 grid 布局 */
 
-      .image-preview-small img {
-        width: 100px; /* 設置圖片最大寬度為100像素，你可以根據需要調整大小 */
-        height: auto; /* 讓瀏覽器按比例縮放高度 */
-        max-width: 100%; /* 設置最大寬度為100%，用於等比例縮放 */
-        max-height: 100px; /* 設置最大高度為100像素，用於等比例縮放 */
-        margin: 5px; /* 設置圖片之間的間距 */
-      }
-      .image-container {
-      width: 100%; /* 设置宽度为窗口的100% */
-      max-height: auto; /* 设置最大高度为视口高度的80% */
-      overflow-y: auto;
-      height: 90px;
-       } /* 当内容超出容器高度时显示垂直滚动条 */
-      .vertical-line {
-        border-left: 2px solid #000; /* 设置分割线样式为实线 */
-        height: auto;
-        width: 1px; /* 设置分割线的高度为父容器的高度 */
-        margin: 0 0px; /* 调整分割线与相邻元素之间的间距 */
-      }
-    
-    .clear-button,
-    .text-input {
-        display: inline-block;
-        vertical-align: middle;
-        /* 添加其他样式，如边框、背景颜色等 */
+      grid-gap: 2px; /* 元素之间的间距 */
+    }
+
+    /* CSS 样式保持不变 */
+    .divider {
+      margin: 20px 0; /* 设置分割线的上下边距 */
+      border-top: 3px solid #000; /* 设置分割线样式 */
+    }
+
+    /* 調整圖片樣式 */
+    #defaultImages img {
+      margin-right: 1px; /* 調整圖片間距 */
+      margin-bottom: 1px; /* 調整圖片下邊距 */
+    }
+    .image-container {
+      width: 900px; /* 设置图片容器的宽度 */
+      height: 100px;
+      border: 3px solid #ccc;
+      margin-right: 10px;
+      margin-top: 30px;
+      margin-bottom: 10px;
+      overflow-x: auto; /* 当图片容器宽度超出屏幕宽度时启用横向滚动 */
+      /*white-space: nowrap; 让图片在一行内显示 */
+    }
+
+    .image-preview-small img {
+      width: auto; /* 設置圖片最大寬度為100像素，你可以根據需要調整大小 */
+      height: auto; /* 讓瀏覽器按比例縮放高度 */
+      max-width: 5%; /* 設置最大寬度為100%，用於等比例縮放 */
+      /*margin: 5px; !* 設置圖片之間的間距 *!*/
+    }
+    .image-container {
+    width: auto; /* 设置宽度为窗口的100% */
+    /*max-height: auto; !* 设置最大高度为视口高度的80% *!*/
+    overflow-y: auto;
+    height: 90px;
     }
 
     #defaultImagesArrowOther {
     display: flex;
     flex-wrap: wrap; /* 讓圖片自動換行 */
     justify-content: flex-start; /* 图片从左侧开始排列 */
-}
+    }
 
-#defaultImagesArrowOther img {
-    width: 80px; /* 让图片根据容器自适应宽度 */
-    height: 40px; /* 固定图片高度为40像素，您可以根据需要调整 */
-    margin: 2.5px; /* 设置图片之间的间距 */
-}
+    #defaultImagesArrowOther img {
+        width: 80px; /* 让图片根据容器自适应宽度 */
+        height: 40px; /* 固定图片高度为40像素，您可以根据需要调整 */
+        margin: 2.5px; /* 设置图片之间的间距 */
+    }
 
-/* 对最后一行的图片进行特殊处理，避免右边距 */
-#defaultImagesArrowOther img:nth-child(5n) {
-    margin-right: 0; /* 清除右边距 */
-}
+    /* 对最后一行的图片进行特殊处理，避免右边距 */
+    #defaultImagesArrowOther img:nth-child(5n) {
+        margin-right: 0; /* 清除右边距 */
+    }
 
-#defaultImagesStatus {
-    display: flex;
-    flex-wrap: wrap; /* 讓圖片自動換行 */
-    flex-direction: row; /* 设置图片水平排列 */
-}
+    #defaultImagesStatus {
+        display: flex;
+        flex-wrap: wrap; /* 讓圖片自動換行 */
+        flex-direction: row; /* 设置图片水平排列 */
+    }
 
-#defaultImagesStatus img {
-    width: 100px; /* 让图片根据容器自适应宽度 */
-    height: 50px; /* 让瀏覽器按比例縮放高度 */
-    max-width: 100px; /* 設置圖片最大寬度為50像素，可根據需要調整 */
-    margin: 2.5px; /* 設置圖片之間的間距 */
-}
+    #defaultImagesStatus img {
+        width: 100px; /* 让图片根据容器自适应宽度 */
+        height: 50px; /* 让瀏覽器按比例縮放高度 */
+        max-width: 100px; /* 設置圖片最大寬度為50像素，可根據需要調整 */
+        margin: 2.5px; /* 設置圖片之間的間距 */
+    }
 
-/* 這個是對最後一個圖片進行特殊處理，避免右邊距 */
-#defaultImagesStatus img:nth-child(5n) {
-    margin-right: 0; /* 清除右邊距 */
-}
+    /* 這個是對最後一個圖片進行特殊處理，避免右邊距 */
+    #defaultImagesStatus img:nth-child(5n) {
+        margin-right: 0; /* 清除右邊距 */
+    }
 
-      #comboName {
+    #comboName {
     margin-right: 10px;
     padding: 8px 12px; /* 设置输入框的内边距 */
     font-size: 16px; /* 设置输入框的字体大小 */
-    } 
-
-    button {
-        margin-right: 10px;
-        padding: 8px 12px; /* 设置按钮的内边距 */
-        font-size: 16px; /* 设置按钮的字体大小 */
     }
 
+    button {
+        margin-right: auto;
+        /*padding: 8px 1px; !* 设置按钮的内边距 *!*/
+        font-size: 16px; /* 设置按钮的字体大小 */
+      .custom-button {
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        /*margin: 4px 2px;*/
+        cursor: pointer;
+      }
+    }
 
-     
+    .clear-button {
+      margin-left: 30px ;
+
+    }
+
+    .download-button {
+      margin-left: 30px;
+      width: auto;
+      height: auto;
+    }
+
+    .gen-btn {
+      height: 47px
+    }
+    .move-btn {
+      height: 47px
+    }
+    .clear-input-btn {
+      height: 47px
+    }
+
 
   </style>
 </head>
@@ -180,72 +176,72 @@
 </div>
   <input type="text" id="imageInput">
   <div class="image-container" style="width: 1200px;"></div>
-  <button onclick="copyToNewInput()">COMBO Gen!</button> <button onclick="removeRightmostImage()">移除一個動作</button> <button onclick="clearImageInput()">清空输入框</button>
-  <input type="text" id="comboName" placeholder="輸入Combo 名稱">
+  <button class="gen-btn" onclick="copyToNewInput()">COMBO Gen!</button> <button class="move-btn" onclick="removeRightmostImage()">Del Move</button> <button class="clear-input-btn" onclick="clearImageInput()">Clear Combo</button>
+  <input type="text" id="comboName" placeholder="Insert Combo Name"  style="height: 30px; width: auto ; text-align: -moz-left;">
   
   <hr class="divider">
   <div>
     <div id="defaultImages">
-      <div id="defaultImagesArrow">
-        <img src="/images/image_1.png" alt="图片1" onclick="selectImage('images/image_1.png')" style="cursor: pointer;width: 60px ; height: 60px">
-        <img src="images/image_2.png" alt="图片2" onclick="selectImage('images/image_2.png')" style="cursor: pointer;width: 60px ; height: 60px">
-        <img src="images/image_3.png" alt="图片3" onclick="selectImage('images/image_3.png')" style="cursor: pointer;width: 60px ; height: 60px">
-        <img src="images/image_4.png" alt="图片4" onclick="selectImage('images/image_4.png')" style="cursor: pointer;width: 60px ; height: 60px">
-        <img src="images/image_5.png" alt="图片5" onclick="selectImage('images/image_5.png')" style="cursor: pointer;width: 60px ; height: 60px">
-        <img src="images/image_6.png" alt="图片6" onclick="selectImage('images/image_6.png')" style="cursor: pointer;width: 60px ; height: 60px">
-        <img src="images/image_7.png" alt="图片7" onclick="selectImage('images/image_7.png')" style="cursor: pointer;width: 60px ; height: 60px">
-        <img src="images/image_8.png" alt="图片8" onclick="selectImage('images/image_8.png')" style="cursor: pointer;width: 60px ; height: 60px">
-        <img src="images/image_9.png" alt="图片9" onclick="selectImage('images/image_9.png')" style="cursor: pointer;width: 60px ; height: 60px">
-        <img src="images/image_10.png" alt="图片10" onclick="selectImage('images/image_10.png')" style="cursor: pointer;width: 60px ; height: 60px">
-        <img src="images/image_11.png" alt="图片11" onclick="selectImage('images/image_11.png')" style="cursor: pointer;width: 60px ; height: 60px">
-        <img src="images/image_12.png" alt="图片12" onclick="selectImage('images/image_12.png')" style="cursor: pointer;width: 60px ; height: 60px">
-        <img src="images/image_13.png" alt="图片13" onclick="selectImage('images/image_13.png')" style="cursor: pointer;width: 60px ; height: 60px">
-        <img src="images/image_14.png" alt="图片14" onclick="selectImage('images/image_14.png')" style="cursor: pointer;width: 60px ; height: 60px">
-        <img src="images/image_15.png" alt="图片15" onclick="selectImage('images/image_15.png')" style="cursor: pointer;width: 60px ; height: 60px">
-        <img src="images/image_16.png" alt="图片16" onclick="selectImage('images/image_16.png')" style="cursor: pointer;width: 60px ; height: 60px">
+      <div id="defaultImagesArrow" style="width: auto;height: auto">
+        <img src="/images/image_1.png" alt="图片1" onclick="selectImage('images/image_1.png')" style="cursor: pointer">
+        <img src="images/image_2.png" alt="图片2" onclick="selectImage('images/image_2.png')" style="cursor: pointer">
+        <img src="images/image_3.png" alt="图片3" onclick="selectImage('images/image_3.png')" style="cursor: pointer">
+        <img src="images/image_4.png" alt="图片4" onclick="selectImage('images/image_4.png')" style="cursor: pointer">
+        <img src="images/image_5.png" alt="图片5" onclick="selectImage('images/image_5.png')" style="cursor: pointer">
+        <img src="images/image_6.png" alt="图片6" onclick="selectImage('images/image_6.png')" style="cursor: pointer">
+        <img src="images/image_7.png" alt="图片7" onclick="selectImage('images/image_7.png')" style="cursor: pointer">
+        <img src="images/image_8.png" alt="图片8" onclick="selectImage('images/image_8.png')" style="cursor: pointer">
+        <img src="images/image_9.png" alt="图片9" onclick="selectImage('images/image_9.png')" style="cursor: pointer">
+        <img src="images/image_10.png" alt="图片10" onclick="selectImage('images/image_10.png')" style="cursor: pointer">
+        <img src="images/image_11.png" alt="图片11" onclick="selectImage('images/image_11.png')" style="cursor: pointer">
+        <img src="images/image_12.png" alt="图片12" onclick="selectImage('images/image_12.png')" style="cursor: pointer">
+        <img src="images/image_13.png" alt="图片13" onclick="selectImage('images/image_13.png')" style="cursor: pointer">
+        <img src="images/image_14.png" alt="图片14" onclick="selectImage('images/image_14.png')" style="cursor: pointer">
+        <img src="images/image_15.png" alt="图片15" onclick="selectImage('images/image_15.png')" style="cursor: pointer">
+        <img src="images/image_16.png" alt="图片16" onclick="selectImage('images/image_16.png')" style="cursor: pointer">
       </div>
   
-      <div id="defaultImagesArrowMove">
-        <img src="images/image_17.png" alt="图片17" onclick="selectImage('images/image_17.png')" style="cursor: pointer;width: 60px ; height: 60px">
-        <img src="images/image_18.png" alt="图片18" onclick="selectImage('images/image_18.png')" style="cursor: pointer;width: 60px ; height: 60px">
-        <img src="images/image_19.png" alt="图片19" onclick="selectImage('images/image_19.png')" style="cursor: pointer;width: 60px ; height: 60px">
-        <img src="images/image_20.png" alt="图片20" onclick="selectImage('images/image_20.png')" style="cursor: pointer;width: 60px ; height: 60px">
-        <img src="images/image_21.png" alt="图片21" onclick="selectImage('images/image_21.png')" style="cursor: pointer;width: 60px ; height: 60px">
-        <img src="/images/image_22.png" alt="图片22" onclick="selectImage('/images/image_22.png')" style="cursor: pointer;width: 60px ; height: 60px">
-        <img src="/images/image_23.png" alt="图片23" onclick="selectImage('/images/image_23.png')" style="cursor: pointer;width: 60px ; height: 60px">
+      <div id="defaultImagesArrowMove" style="width:auto;height: auto">
+        <img src="images/image_17.png" alt="图片17" onclick="selectImage('images/image_17.png')" style="cursor: pointer">
+        <img src="images/image_18.png" alt="图片18" onclick="selectImage('images/image_18.png')" style="cursor: pointer">
+        <img src="images/image_19.png" alt="图片19" onclick="selectImage('images/image_19.png')" style="cursor: pointer">
+        <img src="images/image_20.png" alt="图片20" onclick="selectImage('images/image_20.png')" style="cursor: pointer">
+        <img src="images/image_21.png" alt="图片21" onclick="selectImage('images/image_21.png')" style="cursor: pointer">
+        <img src="/images/image_22.png" alt="图片22" onclick="selectImage('/images/image_22.png')" style="cursor: pointer">
+        <img src="/images/image_23.png" alt="图片23" onclick="selectImage('/images/image_23.png')" style="cursor: pointer">
       </div>
   
-      <div id="defaultImagesArrowBody">
-        <img src="images/image_24.png" alt="图片24" onclick="selectImage('images/image_24.png')" style="cursor: pointer;width: 60px ; height: 60px">
-        <img src="images/image_25.png" alt="图片25" onclick="selectImage('images/image_25.png')" style="cursor: pointer;width: 60px ; height: 60px">
-        <img src="images/image_26.png" alt="图片26" onclick="selectImage('images/image_26.png')" style="cursor: pointer;width: 60px ; height: 60px">
-        <img src="images/image_27.png" alt="图片27" onclick="selectImage('images/image_27.png')" style="cursor: pointer;width: 60px ; height: 60px">
-        <img src="images/image_28.png" alt="图片28" onclick="selectImage('images/image_28.png')" style="cursor: pointer;width: 60px ; height: 60px">
-        <img src="images/image_29.png" alt="图片29" onclick="selectImage('images/image_29.png')" style="cursor: pointer;width: 60px ; height: 60px">
-        <img src="images/image_30.png" alt="图片30" onclick="selectImage('images/image_30.png')" style="cursor: pointer;width: 60px ; height: 60px">
-        <img src="images/image_31.png" alt="图片31" onclick="selectImage('images/image_31.png')" style="cursor: pointer;width: 60px ; height: 60px">
-        <img src="images/image_32.png" alt="图片32" onclick="selectImage('images/image_32.png')" style="cursor: pointer;width: 60px ; height: 60px">
-        <img src="images/image_33.png" alt="图片33" onclick="selectImage('images/image_33.png')" style="cursor: pointer;width: 60px ; height: 60px">
+      <div id="defaultImagesArrowBody" style="width: auto;height: auto">
+        <img src="images/image_24.png" alt="图片24" onclick="selectImage('images/image_24.png')" style="cursor: pointer">
+        <img src="images/image_25.png" alt="图片25" onclick="selectImage('images/image_25.png')" style="cursor: pointer">
+        <img src="images/image_26.png" alt="图片26" onclick="selectImage('images/image_26.png')" style="cursor: pointer">
+        <img src="images/image_27.png" alt="图片27" onclick="selectImage('images/image_27.png')" style="cursor: pointer">
+        <img src="images/image_28.png" alt="图片28" onclick="selectImage('images/image_28.png')" style="cursor: pointer">
+        <img src="images/image_29.png" alt="图片29" onclick="selectImage('images/image_29.png')" style="cursor: pointer">
+        <img src="images/image_30.png" alt="图片30" onclick="selectImage('images/image_30.png')" style="cursor: pointer">
+        <img src="images/image_31.png" alt="图片31" onclick="selectImage('images/image_31.png')" style="cursor: pointer">
+        <img src="images/image_32.png" alt="图片32" onclick="selectImage('images/image_32.png')" style="cursor: pointer">
+        <img src="images/image_33.png" alt="图片33" onclick="selectImage('images/image_33.png')" style="cursor: pointer">
       </div> 
       
       <div>
-        <div id="defaultImagesArrowOther">
-          <img src="images/image_34.png" alt="图片34" onclick="selectImage('images/image_34.png')" style="cursor: pointer;width: 60px ; height: 60px">
-          <img src="images/image_35.png" alt="图片35" onclick="selectImage('images/image_35.png')" style="cursor: pointer;width: 60px ; height: 60px">
-          <img src="images/image_36.png" alt="图片36" onclick="selectImage('images/image_36.png')" style="cursor: pointer;width: 60px ; height: 60px">
-          <img src="images/image_37.png" alt="图片37" onclick="selectImage('images/image_37.png')" style="cursor: pointer;width: 60px ; height: 60px">
-          <img src="images/image_38.png" alt="图片38" onclick="selectImage('images/image_38.png')" style="cursor: pointer;width: 60px ; height: 60px">
-          <img src="images/image_39.png" alt="图片39" onclick="selectImage('images/image_39.png')" style="cursor: pointer;width: 60px ; height: 60px">
-          <img src="images/image_40.png" alt="图片40" onclick="selectImage('images/image_40.png')" style="cursor: pointer;width: 60px ; height: 60px">
-          <img src="images/image_41.png" alt="图片41" onclick="selectImage('images/image_41.png')" style="cursor: pointer;width: 60px ; height: 60px">
-          <img src="images/image_42.png" alt="图片42" onclick="selectImage('images/image_42.png')" style="cursor: pointer;width: 60px ; height: 60px">
-          <img src="images/image_43.png" alt="图片43" onclick="selectImage('images/image_43.png')" style="cursor: pointer;width: 60px ; height: 60px">
-          <img src="images/image_44.png" alt="图片44" onclick="selectImage('images/image_44.png')" style="cursor: pointer;width: 60px ; height: 60px">
-          <img src="images/image_45.png" alt="图片45" onclick="selectImage('images/image_45.png')" style="cursor: pointer;width: 60px ; height: 60px">
+        <div id="defaultImagesArrowOther" style="width: auto;height: 60%">
+          <img src="images/image_34.png" alt="图片34" onclick="selectImage('images/image_34.png')" style="cursor: pointer">
+          <img src="images/image_35.png" alt="图片35" onclick="selectImage('images/image_35.png')" style="cursor: pointer">
+          <img src="images/image_36.png" alt="图片36" onclick="selectImage('images/image_36.png')" style="cursor: pointer">
+          <img src="images/image_37.png" alt="图片37" onclick="selectImage('images/image_37.png')" style="cursor: pointer">
+          <img src="images/image_38.png" alt="图片38" onclick="selectImage('images/image_38.png')" style="cursor: pointer">
+          <img src="images/image_39.png" alt="图片39" onclick="selectImage('images/image_39.png')" style="cursor: pointer">
+          <img src="images/image_40.png" alt="图片40" onclick="selectImage('images/image_40.png')" style="cursor: pointer">
+          <img src="images/image_41.png" alt="图片41" onclick="selectImage('images/image_41.png')" style="cursor: pointer">
+          <img src="images/image_42.png" alt="图片42" onclick="selectImage('images/image_42.png')" style="cursor: pointer">
+          <img src="images/image_43.png" alt="图片43" onclick="selectImage('images/image_43.png')" style="cursor: pointer">
+          <img src="images/image_44.png" alt="图片44" onclick="selectImage('images/image_44.png')" style="cursor: pointer">
+          <img src="images/image_45.png" alt="图片45" onclick="selectImage('images/image_45.png')" style="cursor: pointer">
         </div>  
       </div>
       <div>
-        <div id="defaultImagesStatus">
+        <div id="defaultImagesStatus" style="width: auto;height: 40%">
           <img src="images/image_46.png" alt="图片46" onclick="selectImage('images/image_46.png')" style="cursor: pointer">
           <img src="images/image_47.png" alt="图片47" onclick="selectImage('images/image_47.png')" style="cursor: pointer">
           <img src="images/image_48.png" alt="图片48" onclick="selectImage('images/image_48.png')" style="cursor: pointer">
@@ -270,7 +266,7 @@
       selectedImages.push(imageUrl);
       updateImageInput();
     }
-
+    // 圖片塞入產生器的輸入框
     function updateImageInput() {
       let imageInput = document.getElementById('imageInput');
       let imageContainer = document.querySelector('.image-container');
@@ -281,124 +277,137 @@
         let img = document.createElement('img');
         img.src = imageUrl;
         img.alt = '选定图片';
-        img.style.width = "60px";
-        img.style.height = "40px";
+        img.style.width = "auto";
+        img.style.height = "40%";
         img.classList.add('image-preview-small');
         imageContainer.appendChild(img);
       });
     }
-    // 新增清空輸入框的函數
+    // 清空輸入框
     function clearImageInput() {
-          let imageInput = document.getElementById('imageInput');
-          imageInput.value = '';
-          selectedImages = []; // 清空選擇的圖片列表
-          updateImageInput(); // 更新圖片預覽
-        }
-
+      let imageInput = document.getElementById('imageInput');
+      imageInput.value = '';
+      selectedImages = []; // 清空選擇的圖片列表
+      updateImageInput(); // 更新圖片預覽
+    }
+    // 刪除一張圖片
     function removeRightmostImage() {
-        // 检查是否有选定的图片
-        if (selectedImages.length > 0) {
-            // 移除最右边的图片
-            selectedImages.pop();
-            updateImageInput(); // 更新图片预览
-        }
+      // 检查是否有选定的图片
+      if (selectedImages.length > 0) {
+          // 移除最右边的图片
+          selectedImages.pop();
+          updateImageInput(); // 更新图片预览
+      }
     }
-    User
- function copyToNewInput() {
-    let imageContainer = document.querySelector('.image-container');
-    let comboNameInput = document.getElementById('comboName').value; // 获取 comboName 输入框的值
+    // 產生ＣＯＭＢＯ到下方容器 加上下載按鈕 清除按鈕
+    function copyToNewInput() {
+      let imageContainer = document.querySelector('.image-container');
+      let comboNameInput = document.getElementById('comboName').value; // 获取 comboName 输入框的值
 
-    // 创建父容器，用于存放所有新容器
-    let parentContainer = document.createElement('div');
+      // 创建父容器，用于存放所有新容器
+      let parentContainer = document.createElement('div');
+      let textLabelClearDownloadBTN = document.createElement('div')
 
-    // 创建新的图片容器
-    let newContainer = document.createElement('div');
-    newContainer.classList.add('container');
-    newContainer.style.display = 'block'; // 设置为块级元素，使其占据整行
+      // 创建新的图片容器
+      let newContainer = document.createElement('div');
+      newContainer.classList.add('container');
+      newContainer.style.display = 'block'; // 设置为块级元素，使其占据整行
 
-    // 创建清除按钮
-    let clearButton = document.createElement('button');
-    clearButton.textContent = '清除此COMBO';
-    clearButton.classList.add('clear-button');
+      // 创建清除按钮
+      let clearButton = document.createElement('button');
+      clearButton.style.height = "20px"
+      clearButton.style.marginTop = "13px";
+      clearButton.textContent = 'Del COMBO';
+      clearButton.classList.add('clear-button');
 
-    clearButton.addEventListener('click', function () {
-        newContainer.remove();
-    });
+      clearButton.addEventListener('click', function () {
+          newContainer.remove();
+      });
 
-    // 创建文字说明标签
-    let comboNameLabel = document.createElement('p');
-    comboNameLabel.textContent = comboNameInput; // 设置文字内容
-    comboNameLabel.style.fontSize = '40px'; // 设置字体大小为18像素
-    comboNameLabel.style.fontWeight = 'bold'; // 设置字体加粗
-    comboNameLabel.style.marginTop = "2px";
-    comboNameLabel.style.marginBottom = "2px";
+      // 创建文字说明标签
+      let comboNameLabel = document.createElement('p');
+      comboNameLabel.textContent = comboNameInput; // 设置文字内容
+      comboNameLabel.style.fontSize = '40px'; // 设置字体大小为18像素
+      comboNameLabel.style.fontWeight = 'bold'; // 设置字体加粗
+      comboNameLabel.style.marginTop = "0px";
 
-    // 将清除按钮和文字说明标签添加到新的包含容器
-    newContainer.appendChild(clearButton);
-    newContainer.appendChild(comboNameLabel);
 
-    // 创建新的图片容器
-    let newImageContainer = document.createElement('div');
-    newImageContainer.classList.add('image-container-new');
+      // 将文字说明标签添加到新的包含容器
+      textLabelClearDownloadBTN.appendChild(comboNameLabel);
 
-    // 遍历所有图片元素并复制到新的输入框
-    imageContainer.childNodes.forEach(function (child) {
-        if (child.tagName === 'IMG') {
-            let imageUrl = child.src;
+      // 创建下载按钮
+      let downloadButton = document.createElement('button');
+      downloadButton.style.height = "20px";
+      downloadButton.style.marginTop = "13px";
+      downloadButton.textContent = 'DownLoad Combo PNG';
+      downloadButton.classList.add('download-button');
 
-            // 创建新的图片元素
-            let imgNew = document.createElement('img');
-            imgNew.src = imageUrl;
-            imgNew.alt = '选定图片';
-            imgNew.style.width = "60px";
-            imgNew.style.height = "40px";
-            imgNew.classList.add('image-preview-small');
+      // 将下载按钮添加到新的包含容器
+      textLabelClearDownloadBTN.appendChild(downloadButton);
+      // 将清除按钮加到新的包含容器
+      textLabelClearDownloadBTN.appendChild(clearButton);
 
-            // 将新图片元素添加到新的图片容器
-            newImageContainer.appendChild(imgNew);
+      // 使用 CSS 控制它们的布局
+      textLabelClearDownloadBTN.style.display = 'flex';
+
+      // 创建新的图片容器
+      let newImageContainer = document.createElement('div');
+      newImageContainer.classList.add('image-container-new');
+
+      // 遍历所有图片元素并复制到新的输入框
+      imageContainer.childNodes.forEach(function (child) {
+          if (child.tagName === 'IMG') {
+              let imageUrl = child.src;
+
+              // 创建新的图片元素
+              let imgNew = document.createElement('img');
+              imgNew.src = imageUrl;
+              imgNew.alt = '选定图片';
+              imgNew.style.width = "auto";
+              imgNew.style.height = "40px";
+              imgNew.style.marginTop = "3px";
+              imgNew.classList.add('image-preview-small');
+
+              // 将新图片元素添加到新的图片容器
+              newImageContainer.appendChild(imgNew);
+          }
+      });
+
+      // 将新的图片容器添加到新的包含容器
+      newContainer.appendChild(textLabelClearDownloadBTN);
+      newContainer.appendChild(newImageContainer);
+
+
+      // 在创建新容器后插入分割线
+      let hr = document.createElement('hr');
+      hr.style.border = 'none'; // 移除默认的边框样式
+      hr.style.height = '3px'; // 设置分割线的高度
+      hr.style.backgroundColor = 'black'; // 设置分割线的颜色
+      newContainer.appendChild(hr);
+
+      // 将新的容器添加到父容器中
+      parentContainer.appendChild(newContainer);
+
+      // 将父容器插入到页面的最后
+      document.body.appendChild(parentContainer);
+
+      downloadButton.addEventListener('click', async function () {
+        try {
+            let canvas = await html2canvas(parentContainer);
+            // 将 canvas 转换为图片文件的 Data URL
+            let image = canvas.toDataURL();
+
+            // 创建一个 <a> 元素，用于下载图片
+            let link = document.createElement('a');
+            link.href = image;
+            link.download = 'combo_image.png';
+            link.click();
+        } catch (error) {
+            console.error('An error occurred:', error);
         }
-    });
-
-    // 将新的图片容器添加到新的包含容器
-    newContainer.appendChild(newImageContainer);
-
-    // 在创建新容器后插入分割线
-    let hr = document.createElement('hr');
-    hr.style.border = 'none'; // 移除默认的边框样式
-    hr.style.height = '3px'; // 设置分割线的高度
-    hr.style.backgroundColor = 'black'; // 设置分割线的颜色
-    newContainer.appendChild(hr);
-
-    // 创建下载按钮
-    let downloadButton = document.createElement('button');
-    downloadButton.textContent = '下载图片';
-    downloadButton.classList.add('download-button');
-
-    // 将下载按钮添加到新的包含容器
-    newContainer.appendChild(downloadButton);
-
-    // 将新的容器添加到父容器中
-    parentContainer.appendChild(newContainer);
-
-    // 将父容器插入到页面的最后
-    document.body.appendChild(parentContainer);
-
-    downloadButton.addEventListener('click', async function () {
-    try {
-        let canvas = await html2canvas(parentContainer);
-        // 将 canvas 转换为图片文件的 Data URL
-        let image = canvas.toDataURL();
-
-        // 创建一个 <a> 元素，用于下载图片
-        let link = document.createElement('a');
-        link.href = image;
-        link.download = 'combo_image.png';
-        link.click();
-    } catch (error) {
-        console.error('An error occurred:', error);
+      });
+     clearImageInput()
     }
-});
-}
   </script>
 </body>
 </html>
